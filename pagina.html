@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Angie Santizo | Publicidad y Diseños</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 10% 10%, #ffd1e3, transparent 30%),
+                radial-gradient(circle at 90% 90%, #e9c8ff, transparent 30%),
+                linear-gradient(135deg, #fff0f6, #ffe2ed, #f8e8ff);
+
+            color: #6f3d55;
+            padding: 30px 20px;
+        }
+
+        /* CONTENEDOR */
+
+        .pagina {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* TARJETA PRINCIPAL */
+
+        .card {
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255,255,255,0.9);
+
+            border-radius: 35px;
+
+            padding: 55px 40px;
+
+            text-align: center;
+
+            box-shadow:
+                0 20px 60px rgba(174, 82, 124, 0.16);
+
+            animation: aparecer 0.8s ease;
+        }
+
+        @keyframes aparecer {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* LOGO */
+
+        .logo {
+
+            width: 95px;
+            height: 95px;
+
+            margin: auto;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f58db5,
+                    #dca1ed
+                );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+
+            font-size: 38px;
+            font-weight: bold;
+
+            box-shadow:
+                0 10px 30px rgba(203, 101, 151, 0.3);
+        }
+
+        h1 {
+
+            margin-top: 20px;
+
+            font-size: 42px;
+
+            color: #b84475;
+
+            letter-spacing: -1px;
+        }
+
+        .subtitulo {
+
+            margin-top: 8px;
+
+            color: #8c7280;
+
+            font-size: 18px;
+        }
+
+        .linea {
+
+            width: 75px;
+            height: 4px;
+
+            margin: 23px auto;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #f28caf,
+                    #d89ae8
+                );
+        }
+
+        .descripcion {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #725f68;
+
+            line-height: 1.8;
+
+            font-size: 16px;
+        }
+
+        /* SERVICIOS */
+
+        .servicios {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+
+            margin-top: 35px;
+        }
+
+        .servicio {
+
+            border: none;
+
+            border-radius: 22px;
+
+            padding: 25px 15px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff1f7,
+                    #f8eaff
+                );
+
+            color: #a3406c;
+
+            font-size: 17px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 8px 20px rgba(180, 80, 130, 0.08);
+        }
+
+        .servicio:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 15px 30px rgba(180, 80, 130, 0.16);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffe3ef,
+                    #f2dcff
+                );
+        }
+
+        .icono {
+
+            display: block;
+
+            font-size: 32px;
+
+            margin-bottom: 10px;
+        }
+
+        /* EJEMPLOS */
+
+        .ejemplos {
+
+            margin-top: 55px;
+
+            padding-top: 40px;
+
+            border-top: 1px solid #f3cfdf;
+        }
+
+        .ejemplos h2 {
+
+            font-size: 32px;
+
+            color: #b84475;
+
+            margin-bottom: 8px;
+        }
+
+        .ejemplos p {
+
+            color: #8c7280;
+
+            margin-bottom: 25px;
+        }
+
+        .imagen-ejemplos {
+
+            width: 100%;
+
+            max-width: 950px;
+
+            display: block;
+
+            margin: auto;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 15px 40px rgba(164, 75, 117, 0.18);
+
+            transition: 0.3s;
+        }
+
+        .imagen-ejemplos:hover {
+
+            transform: scale(1.01);
+
+            box-shadow:
+                0 20px 50px rgba(164, 75, 117, 0.23);
+        }
+
+        /* CONTACTO */
+
+        .contacto {
+
+            margin-top: 50px;
+
+            padding-top: 35px;
+
+            border-top: 1px solid #f3cfdf;
+        }
+
+        .contacto p {
+
+            color: #8c7280;
+
+            margin-bottom: 15px;
+        }
+
+        .whatsapp {
+
+            display: inline-block;
+
+            padding: 16px 30px;
+
+            border-radius: 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f47eaa,
+                    #d784db
+                );
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            font-size: 17px;
+
+            box-shadow:
+                0 10px 25px rgba(210, 90, 150, 0.25);
+
+            transition: 0.3s;
+        }
+
+        .whatsapp:hover {
+
+            transform: translateY(-4px) scale(1.02);
+
+            box-shadow:
+                0 15px 30px rgba(210, 90, 150, 0.35);
+        }
+
+        .numero {
+
+            margin-top: 14px;
+
+            color: #a3406c !important;
+
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+
+        footer {
+
+            margin-top: 35px;
+
+            color: #aa8999;
+
+            font-size: 13px;
+        }
+
+        /* CELULAR */
+
+        @media (max-width: 650px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .card {
+                padding: 40px 20px;
+                border-radius: 25px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .servicios {
+                grid-template-columns: 1fr;
+            }
+
+            .ejemplos h2 {
+                font-size: 28px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<div class="pagina">
+
+    <main class="card">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+            AS
+        </div>
+
+
+        <!-- NOMBRE -->
+
+        <h1>
+            Angie Santizo
+        </h1>
+
+        <p class="subtitulo">
+            Servicios de Publicidad & Diseños
+        </p>
+
+
+        <div class="linea"></div>
+
+
+        <!-- DESCRIPCIÓN -->
+
+        <p class="descripcion">
+
+            ¿Necesitas darle un toque especial a tu negocio,
+            evento o celebración? 💗
+
+            Creo diseños publicitarios y tarjetas
+            personalizados para cada ocasión.
+
+        </p>
+
+
+        <!-- SERVICIOS -->
+
+        <section class="servicios">
+
+            <button class="servicio">
+
+                <span class="icono">
+                    📢
+                </span>
+
+                Publicidad
+
+            </button>
+
+
+            <button class="servicio">
+
+                <span class="icono">
+                    🎂
+                </span>
+
+                Tarjetas de cumpleaños
+
+            </button>
+
+
+            <button class="servicio">
+
+                <span class="icono">
+                    💌
+                </span>
+
+                Invitaciones
+
+            </button>
+
+
+            <button class="servicio">
+
+                <span class="icono">
+                    ✨
+                </span>
+
+                Diseños personalizados
+
+            </button>
+
+        </section>
+
+
+        <!-- EJEMPLOS -->
+
+        <section class="ejemplos">
+
+            <h2>
+                ✨ Ejemplos
+            </h2>
+
+            <p>
+                Algunos de los diseños que puedo crear para ti
+            </p>
+
+
+            <img
+                src="imagenes/ejemplos.png" width="500"
+                alt="Ejemplos de trabajos"
+                class="imagen"
+            >
+
+        </section>
+
+
+        <!-- CONTACTO -->
+
+        <section class="contacto">
+
+            <p>
+                ¿Quieres solicitar un diseño?
+            </p>
+
+
+            <a```html
+
+    class="telegram"
+    href="https://t.me/luuyui"
+    target="_blank"
+    rel="noopener"
+>
+    ✈️ Contactarme por Telegram
+</a>
+
+<p class="usuario">
+    Telegram: @luuyui
+</p>
+
+            </p>
+
+        </section>
+
+
+        <!-- PIE -->
+
+        <footer>
+
+            © 2026 Angie Santizo · Diseños hechos con creatividad 💗
+
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>
